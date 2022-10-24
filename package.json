@@ -1,0 +1,39 @@
+{
+  "name": "vite-redux-seed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Base React+Redux project with pre-configured static analysis",
+  "keywords": [
+    "react",
+    "redux",
+    "redux-toolkit",
+    "typescript",
+    "vite",
+    "template"
+  ],
+  "homepage": ".",
+  "repository": "github:code-chimp/vite-redux-seed",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Tim Goshinski",
+    "email": "tim@code-chimp.com",
+    "url": "https://code-chimp.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
