@@ -1,6 +1,6 @@
 # React+Redux Seed (vite)
 
-A React + Redux project powered by [Vite (veet)][vit] with all of my favorite pre-flight tooling wired up and
+A React + Redux project powered by [Vite (veet)][vit] with all of my favorite preflight tooling wired up and
 ready to go.
 
 Features:
@@ -11,6 +11,17 @@ Features:
 - Draconian style and code quality enforcement courtesy of [Prettier][pret], [ESLint][esl], [StyleLint][sty] and
   [Vitest][vitst] powered by [Husky][hus] pre-commit hooks
 - [Documentation!](docs/README.md)
+
+## Usage
+
+The easiest way to get started with this template is to clone it with [Degit][dgt]:
+
+```shell
+npx degit code-chimp/vite-redux-seed new-redux-project
+cd new-redux-project
+yarn
+npx npm-check-updates
+```
 
 ## NOTE:
 
@@ -27,3 +38,4 @@ security warnings.
 [esl]: https://eslint.org/ 'The pluggable linting utility for JavaScript and JSX'
 [sty]: https://stylelint.io/ 'A mighty, modern linter that helps you avoid errors and enforce conventions in your styles'
 [hus]: https://typicode.github.io/husky/#/ 'Modern git hooks made easy'
+[dgt]: https://github.com/Rich-Harris/degit 'straightforward project scaffolding'

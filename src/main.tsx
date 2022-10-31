@@ -1,10 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.scss';
+import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import 'bootstrap';
+import AppAlerts from './components/app/AppAlerts';
+import AppToasts from './components/app/AppToasts';
+import './styles/global.scss';
+import store from './store';
+import routes from './routes';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <AppAlerts />
+      <AppToasts />
+      <RouterProvider router={routes} />
+    </Provider>
   </React.StrictMode>,
 );
