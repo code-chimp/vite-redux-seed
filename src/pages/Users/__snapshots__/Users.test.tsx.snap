@@ -1,0 +1,38 @@
+// Vitest Snapshot v1
+
+exports[`components / Users > should match the snapshot 1`] = `
+<DocumentFragment>
+  <table
+    class="table"
+  >
+    <thead>
+      <tr
+        class="table-info"
+      >
+        <th>
+          Name
+        </th>
+        <th>
+          City
+        </th>
+        <th>
+          Zip
+        </th>
+        <th>
+          Company
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          colspan="4"
+          data-testid="loading-indicator"
+        >
+          Loading...
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

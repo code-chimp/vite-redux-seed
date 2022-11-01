@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 /* This is just an homely little demo page and is meant to be removed from a real project */
 import React from 'react';
 import { useAppDispatch } from '../../helpers';

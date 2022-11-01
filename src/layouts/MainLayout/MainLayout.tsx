@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 /* complete demo code - replace with something real then write the tests */
 import React, { FC } from 'react';
 import { Link, Outlet } from 'react-router-dom';

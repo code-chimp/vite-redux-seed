@@ -6,7 +6,7 @@ import { ACCESS_ERROR, GENERIC_SERVICE_ERROR } from '../constants';
 const apiUri = import.meta.env.VITE_API_URI;
 
 function createRequest(method: FetchRequestType) {
-  return (url: string, body?: never, token?: string): Request => {
+  return (url: string, body?: any, token?: string): Request => {
     const headers: Headers = new Headers({
       'Cache-Control': 'no-cache',
       Pragma: 'no-cache',

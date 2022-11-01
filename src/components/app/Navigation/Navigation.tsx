@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 /* no logic */
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';

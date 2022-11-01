@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 import React from 'react';
 import { useRouteError } from 'react-router-dom';
 
