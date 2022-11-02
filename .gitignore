@@ -3,6 +3,7 @@ dist-ssr
 *.local
 *.ntvs*
 *.njsproj
+.vitest-result.json
 
 ### VisualStudioCode template
 .vscode/*

@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 /*
  * There is no logic to test in this file as it is simply an implementation of
  * the pattern described in: https://redux.js.org/tutorial/typescript-quick-start

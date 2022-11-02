@@ -30,7 +30,7 @@ describe('counter', () => {
       const { incrementByAmount } = counter.actions;
       const expected = 17;
 
-      let state = counter.reducer(initialState, incrementByAmount(2));
+      const state = counter.reducer(initialState, incrementByAmount(2));
 
       expect(state.value).toBe(expected);
     });
