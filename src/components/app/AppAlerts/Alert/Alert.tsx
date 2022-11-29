@@ -24,7 +24,7 @@ const Alert: FC<IAlertProps> = ({ alert }) => {
   useEffect(() => {
     const handleClose = () => {
       /* third party functionality not executed by Jest */
-      /* istanbul ignore next */
+      /* istanbul ignore next -- @preserve */
       dispatch(removeAlert(alert.id));
     };
     const el = ref.current;

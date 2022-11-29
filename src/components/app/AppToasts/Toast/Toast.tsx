@@ -27,7 +27,7 @@ const Toast: FC<IAppToastProps> = ({ toastMessage }) => {
   useEffect(() => {
     const handleClose = () => {
       /* third party functionality not executed by Jest */
-      /* istanbul ignore next */
+      /* istanbul ignore next -- @preserve */
       dispatch(removeToastMessage(toastMessage.id));
     };
     const el = ref.current;

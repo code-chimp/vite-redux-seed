@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import thunk from 'redux-thunk';
 import { Mock } from 'vitest';
 import configureMockStore, { MockStoreEnhanced } from 'redux-mock-store';
@@ -98,6 +99,7 @@ describe('store / slices / user', () => {
 
   describe('thunk(s)', () => {
     const mockStore = configureMockStore([thunk]);
+    // eslint-disable-next-line @typescript-eslint/ban-types
     let store: MockStoreEnhanced<unknown, {}>;
 
     describe('loadUsers', () => {
