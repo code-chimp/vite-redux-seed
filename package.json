@@ -1,6 +1,10 @@
 {
   "name": "vite-redux-seed",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=17.5",
+    "npm": ">=8.4"
+  },
   "private": true,
   "type": "module",
   "description": "Base React+Redux project with pre-configured static analysis",

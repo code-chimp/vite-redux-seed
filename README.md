@@ -3,6 +3,8 @@
 A React + Redux project powered by [Vite (veet)][vit] with all of my favorite preflight tooling wired up and
 ready to go.
 
+**NOTE:** This project requires Node version 17.5 or better due to the use of the new node-fetch API.
+
 Features:
 
 - [Redux / Redux Toolkit][rkt]
