@@ -9,8 +9,13 @@ export default mergeConfig(
       environment: 'jsdom',
       globals: true,
       setupFiles: './src/setupTests.ts',
+      reporters: ['junit'],
+      outputFile: {
+        junit: './coverage/junit.xml',
+      },
       coverage: {
         provider: 'istanbul',
+        reporter: ['json', 'lcov', 'text', 'cobertura'],
         all: true,
         include: ['src/**/*.{ts,tsx}'],
         exclude: [

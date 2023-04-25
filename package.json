@@ -35,8 +35,9 @@
     "lint:ts": "eslint ./src/**/**.ts*",
     "lint:styles": "stylelint \"./src/**/*.scss\"",
     "fix:styles": "stylelint \"./src/**/*.scss\" --fix",
-    "test": "vitest --run",
-    "test:cov": "vitest run --coverage",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ci": "npm run test:coverage",
     "prepare": "husky install"
   },
   "dependencies": {
