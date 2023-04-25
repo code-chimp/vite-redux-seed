@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { TransitionGroup } from 'react-transition-group';
 import IAlert from '../../../@interfaces/IAlert';
 import { useAppSelector } from '../../../helpers';
 import { selectAlerts } from '../../../store/slices/alerts';
@@ -12,11 +11,9 @@ const AppAlerts: FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.alertsCol}>
-        <TransitionGroup>
-          {alerts.map((alert: IAlert) => (
-            <Alert key={alert.id} alert={alert} />
-          ))}
-        </TransitionGroup>
+        {alerts.map((alert: IAlert) => (
+          <Alert key={alert.id} alert={alert} />
+        ))}
       </div>
     </div>
   );
