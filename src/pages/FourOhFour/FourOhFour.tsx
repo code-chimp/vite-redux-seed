@@ -4,7 +4,6 @@ import { useRouteError } from 'react-router-dom';
 
 export default function FourOhFour() {
   const error = useRouteError() as Error;
-  debugger;
 
   return (
     <div className="error-page">
