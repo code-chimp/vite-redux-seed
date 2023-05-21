@@ -1,6 +1,7 @@
 # React+Redux Seed (vite)
 
-[![codecov](https://codecov.io/gh/code-chimp/vite-redux-seed/branch/main/graph/badge.svg?token=QZ2JU0V4M0)](https://codecov.io/gh/code-chimp/vite-redux-seed)![Test workflow](https://github.com/code-chimp/vite-redux-seed/actions/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/code-chimp/vite-redux-seed/branch/main/graph/badge.svg?token=QZ2JU0V4M0)](https://codecov.io/gh/code-chimp/vite-redux-seed)
+![Test workflow](https://github.com/code-chimp/vite-redux-seed/actions/workflows/test.yml/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![license](https://img.shields.io/badge/license-BSD-green.svg)](https://github.com/code-chimp/vite-redux-seed/blob/main/LICENSE)
 
