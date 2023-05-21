@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import React, { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { Toast as BSToast } from 'bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

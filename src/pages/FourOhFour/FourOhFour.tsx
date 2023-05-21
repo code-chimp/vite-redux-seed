@@ -1,5 +1,5 @@
+/* ignore generic component in coverage report */
 /* istanbul ignore file -- @preserve */
-import React from 'react';
 import { useRouteError } from 'react-router-dom';
 
 export default function FourOhFour() {
@@ -7,9 +7,9 @@ export default function FourOhFour() {
 
   return (
     <div className="error-page">
-      <h1>Something went wrong.</h1>
-      <p>Sorry, there was an unexpected error</p>
-      <p>{error.message || JSON.stringify(error)}</p>
+      <h1>Page not found.</h1>
+      <p>Sorry, we were unable to locate the resource that you have requested.</p>
+      {error ? <p>{error.message || JSON.stringify(error)}</p> : null}
     </div>
   );
 }

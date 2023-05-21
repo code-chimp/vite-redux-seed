@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useAppSelector } from '../../../helpers';
 import { selectToasts } from '../../../store/slices/toasts';
 import Toast from './Toast';

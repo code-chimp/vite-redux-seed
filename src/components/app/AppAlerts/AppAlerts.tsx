@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import IAlert from '../../../@interfaces/IAlert';
 import { useAppSelector } from '../../../helpers';
 import { selectAlerts } from '../../../store/slices/alerts';

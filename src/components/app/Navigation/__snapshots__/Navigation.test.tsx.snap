@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`components / app / Navigation > should match the snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="nav"
+  >
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        href="/users"
+      >
+        Users
+      </a>
+    </li>
+    <li
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        href="/notifications"
+      >
+        Notifications
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

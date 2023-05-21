@@ -1,6 +1,4 @@
-/* istanbul ignore file -- @preserve */
-/* no logic */
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import AppRoutes from '../../../@enums/AppRoutes';
 

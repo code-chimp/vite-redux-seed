@@ -1,6 +1,6 @@
 /* istanbul ignore file -- @preserve */
 /* This is just an homely little demo page and is meant to be removed from a real project */
-import React from 'react';
+import { FC } from 'react';
 import { useAppDispatch } from '../../helpers';
 import {
   addErrorAlert,
@@ -15,7 +15,7 @@ import {
   addWarningToastMessage,
 } from '../../store/slices/toasts';
 
-const NotificationsDemo = () => {
+const NotificationsDemo: FC = () => {
   const dispatch = useAppDispatch();
 
   // alerts

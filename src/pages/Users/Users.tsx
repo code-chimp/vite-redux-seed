@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../helpers';
 import AsyncStates from '../../@enums/AsyncStates';
 import IUser from '../../@interfaces/IUser';

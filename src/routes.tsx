@@ -1,16 +1,15 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { RouteObject } from 'react-router-dom';
 import AppRoutes from './@enums/AppRoutes';
-import Counter from './pages/Counter';
+import MainLayout from './layouts/MainLayout';
 import FourOhFour from './pages/FourOhFour';
+import Counter from './pages/Counter';
 import NotificationsDemo from './pages/NotificationsDemo';
 import Users from './pages/Users';
-import MainLayout from './layouts/MainLayout';
 
-const router = createBrowserRouter([
+const routes: Array<RouteObject> = [
   {
     path: AppRoutes.Home,
     element: <MainLayout />,
-    errorElement: <FourOhFour />,
     children: [
       {
         path: AppRoutes.Home,
@@ -24,8 +23,12 @@ const router = createBrowserRouter([
         path: AppRoutes.Users,
         element: <Users />,
       },
+      {
+        path: AppRoutes.Fallthrough,
+        element: <FourOhFour />,
+      },
     ],
   },
-]);
+];
 
-export default router;
+export default routes;

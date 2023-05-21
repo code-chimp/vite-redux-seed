@@ -1,6 +1,6 @@
 /* istanbul ignore file -- @preserve */
 /* complete demo code - replace with something real then write the tests */
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBootstrap, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
