@@ -1,5 +1,9 @@
 # React+Redux Seed (vite)
 
+[![codecov](https://codecov.io/gh/code-chimp/vite-redux-seed/branch/main/graph/badge.svg?token=QZ2JU0V4M0)](https://codecov.io/gh/code-chimp/vite-redux-seed)![Test workflow](https://github.com/code-chimp/vite-redux-seed/actions/workflows/test.yml/badge.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![license](https://img.shields.io/badge/license-BSD-green.svg)](https://github.com/code-chimp/vite-redux-seed/blob/main/LICENSE)
+
 A React + Redux project powered by [Vite (veet)][vit] with all of my favorite preflight tooling wired up and
 ready to go.
 
@@ -19,7 +23,7 @@ Features:
 The easiest way to get started with this template is to clone it with [Degit][dgt]:
 
 ```shell
-npx degit code-chimp/vite-redux-seed new-redux-project
+npx degit code-chimp/vite-redux-seed#main new-redux-project
 cd new-redux-project
 yarn
 npx npm-check-updates
