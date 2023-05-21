@@ -35,8 +35,6 @@ Feel free to use this as a basis for your own project but you may want to run `n
 getting the latest packages as I will only sporadically update `package.json` as I see major breaking changes or get
 security warnings.
 
-I have included both NPM and Yarn lock files, just delete the one you do not want
-
 [vit]: https://vitejs.dev/ 'Next generation front-end tooling powered by ESBuild.'
 [vitst]: https://vitest.dev/ 'Blazing fast unit test framework.'
 [rkt]: https://redux-toolkit.js.org/ 'Take a lot of the boilerplate out of developing Redux applications'
