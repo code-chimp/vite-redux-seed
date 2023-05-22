@@ -1,8 +1,11 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
+    "donjayamanne.githistory",
     "esbenp.prettier-vscode",
-    "GitHub.vscode-codeql",
+    "humano.rest-client",
+    "mhutchie.git-graph",
+    "redhat.vscode-yaml",
     "stylelint.vscode-stylelint",
     "zixuanchen.vitest-explorer"
   ]

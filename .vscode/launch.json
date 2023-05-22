@@ -1,22 +1,49 @@
 {
-  "version": "0.2.0",
-  // Use Intellisense to learn about possible attributes.
+  // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch dev server",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "npx",
+      "name": "Launch Vite DEV server",
+      "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "vite"
+        "run-script",
+        "start:dev"
       ],
       "serverReadyAction": {
         "action": "debugWithChrome",
-        "pattern": "http://localhost:([0-9]+)/",
+        "pattern": "http://localhost:([0-9]+)",
         "uriFormat": "http://localhost:%s"
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Vite DEV server (local)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "start:local"
+      ],
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "pattern": "http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Test File",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "smartStep": true,
+      "console": "integratedTerminal"
     }
   ]
 }
