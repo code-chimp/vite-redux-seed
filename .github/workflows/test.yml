@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [main]
+    branches: [main, rtk-query]
   pull_request:
-    branches: [main]
+    branches: [main, rtk-query]
 
 jobs:
   Test:
