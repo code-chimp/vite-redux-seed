@@ -1,17 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import IAlert from '../@interfaces/IAlert';
-import IToastMessage from '../@interfaces/IToastMessage';
 import alerts from './slices/alerts';
-import counter, { ICounterSlice } from './slices/counter';
+import counter from './slices/counter';
 import toasts from './slices/toasts';
-import user, { IUserSlice } from './slices/user';
-
-export interface IStore {
-  alerts: Array<IAlert>;
-  counter: ICounterSlice;
-  toasts: Array<IToastMessage>;
-  user: IUserSlice;
-}
+import user from './slices/user';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 const store = configureStore({
   reducer: { alerts, counter, toasts, user },
@@ -19,5 +11,9 @@ const store = configureStore({
 });
 
 export type AppDispatch = typeof store.dispatch;
+export type StoreState = ReturnType<typeof store.getState>;
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<StoreState> = useSelector;
 
 export default store;

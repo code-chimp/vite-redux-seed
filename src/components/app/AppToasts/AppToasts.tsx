@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useAppSelector } from '../../../helpers';
+import { useAppSelector } from '../../../store';
 import { selectToasts } from '../../../store/slices/toasts';
 import Toast from './Toast';
 

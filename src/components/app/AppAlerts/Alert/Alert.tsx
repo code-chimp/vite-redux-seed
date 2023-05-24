@@ -11,8 +11,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import AlertTypes from '../../../../@enums/AlertTypes';
 import IAlert from '../../../../@interfaces/IAlert';
+import { useAppDispatch } from '../../../../store';
 import { removeAlert } from '../../../../store/slices/alerts';
-import { useAppDispatch } from '../../../../helpers';
 
 export interface IAlertProps {
   alert: IAlert;

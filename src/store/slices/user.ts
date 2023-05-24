@@ -3,7 +3,7 @@ import AsyncStates from '../../@enums/AsyncStates';
 import IUser from '../../@interfaces/IUser';
 import AsyncStatus from '../../@types/AsyncStatus';
 import { fetchUsers } from '../../services/user/UsersApi';
-import { IStore } from '../';
+import { StoreState } from '../';
 
 export interface IUserSlice {
   current: IUser | null;
@@ -74,10 +74,10 @@ export const user = createSlice({
 
 /* Ignore selectors in test coverage report due to simplicity */
 /* istanbul ignore next */
-export const selectCurrentUser = (state: IStore) => state.user.current;
+export const selectCurrentUser = (state: StoreState) => state.user.current;
 
 /* istanbul ignore next */
-export const selectUsers = (state: IStore) => state.user.users;
+export const selectUsers = (state: StoreState) => state.user.users;
 
 export const { setCurrentUser, clearCurrentUser } = user.actions;
 

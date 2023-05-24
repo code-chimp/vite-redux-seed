@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../helpers';
 import AsyncStates from '../../@enums/AsyncStates';
 import IUser from '../../@interfaces/IUser';
+import { useAppDispatch, useAppSelector } from '../../store';
 import { loadUsers, selectUsers } from '../../store/slices/user';
 
 const Users: FC = () => {

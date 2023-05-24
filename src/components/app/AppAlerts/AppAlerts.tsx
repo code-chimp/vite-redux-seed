@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import IAlert from '../../../@interfaces/IAlert';
-import { useAppSelector } from '../../../helpers';
+import { useAppSelector } from '../../../store';
 import { selectAlerts } from '../../../store/slices/alerts';
-import styles from './AppAlerts.module.scss';
 import Alert from './Alert';
+import styles from './AppAlerts.module.scss';
 
 const AppAlerts: FC = () => {
   const alerts = useAppSelector(selectAlerts);

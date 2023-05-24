@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 import AlertTypes from '../../@enums/AlertTypes';
 import AlertType from '../../@types/AlertType';
 import IAlert from '../../@interfaces/IAlert';
-import { IStore } from '../';
+import { StoreState } from '../';
 
 const initialState: Array<IAlert> = [];
 
@@ -63,6 +63,6 @@ export const alerts = createSlice({
 export const { addErrorAlert, addInfoAlert, addSuccessAlert, addWarningAlert, removeAlert } =
   alerts.actions;
 
-export const selectAlerts = (state: IStore) => state.alerts;
+export const selectAlerts = (state: StoreState) => state.alerts;
 
 export default alerts.reducer;

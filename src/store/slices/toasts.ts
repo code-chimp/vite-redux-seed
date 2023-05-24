@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { v4 as uuid } from 'uuid';
 import IToastMessage from '../../@interfaces/IToastMessage';
 import ToastTypes from '../../@enums/ToastTypes';
-import { IStore } from '../';
+import { StoreState } from '../';
 
 const initialState: Array<IToastMessage> = [];
 
@@ -66,6 +66,6 @@ export const {
   removeToastMessage,
 } = toasts.actions;
 
-export const selectToasts = (state: IStore) => state.toasts;
+export const selectToasts = (state: StoreState) => state.toasts;
 
 export default toasts.reducer;

@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import ToastTypes from '../../../../@enums/ToastTypes';
 import IToastMessage from '../../../../@interfaces/IToastMessage';
-import { useAppDispatch } from '../../../../helpers';
+import { useAppDispatch } from '../../../../store';
 import { removeToastMessage } from '../../../../store/slices/toasts';
 
 export interface IAppToastProps {

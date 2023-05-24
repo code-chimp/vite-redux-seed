@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { useAppDispatch, useAppSelector } from '../../store';
 import { decrement, increment, selectCount } from '../../store/slices/counter';
-import { useAppDispatch, useAppSelector } from '../../helpers';
 
 const Counter: FC = () => {
   const count = useAppSelector(selectCount);

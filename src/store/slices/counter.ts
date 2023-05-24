@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { IStore } from '../';
+import { StoreState } from '../';
 
 export interface ICounterSlice {
   value: number;
@@ -25,7 +25,7 @@ export const counter = createSlice({
 
 /* Ignore selectors in test coverage report due to simplicity */
 /* istanbul ignore next */
-export const selectCount = (state: IStore) => state.counter.value;
+export const selectCount = (state: StoreState) => state.counter.value;
 
 export const { increment, decrement, incrementByAmount } = counter.actions;
 

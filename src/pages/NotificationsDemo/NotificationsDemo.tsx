@@ -1,7 +1,7 @@
-/* istanbul ignore file -- @preserve */
 /* This is just an homely little demo page and is meant to be removed from a real project */
+/* istanbul ignore file -- @preserve */
 import { FC } from 'react';
-import { useAppDispatch } from '../../helpers';
+import { useAppDispatch } from '../../store';
 import {
   addErrorAlert,
   addInfoAlert,
