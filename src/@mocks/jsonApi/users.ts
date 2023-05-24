@@ -1,4 +1,4 @@
-import IUser from '../@interfaces/jsonApi/IUser';
+import IUser from '../../@interfaces/jsonApi/IUser';
 
 export const mockUsers: Array<IUser> = [
   {

@@ -1,0 +1,3 @@
+### GET SWAPI Vehicles
+GET https://swapi.dev/api/films
+Accept: application/json
