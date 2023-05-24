@@ -23,7 +23,6 @@ export default mergeConfig(
           'src/@interfaces/**',
           'src/@mocks/**',
           'src/@types/**',
-          'src/services/**',
           'src/**/index.{ts,tsx}',
           'src/main.tsx',
           'src/routes.tsx',

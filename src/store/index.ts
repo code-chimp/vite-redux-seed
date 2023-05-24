@@ -1,12 +1,13 @@
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import jsonApi from './services/json';
 import alerts from './slices/alerts';
 import counter from './slices/counter';
 import toasts from './slices/toasts';
-import user from './slices/user';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 const store = configureStore({
-  reducer: { alerts, counter, toasts, user },
+  reducer: { alerts, counter, toasts, [jsonApi.reducerPath]: jsonApi.reducer },
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(jsonApi.middleware),
   devTools: process.env.NODE_ENV !== 'production',
 });
 
