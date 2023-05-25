@@ -24,7 +24,7 @@ Features:
 The easiest way to get started with this template is to clone it with [Degit][dgt]:
 
 ```shell
-npx degit code-chimp/vite-redux-seed#rtk-query new-redux-project
+npx degit code-chimp/vite-redux-seed#main new-redux-project
 cd new-redux-project
 yarn
 npx npm-check-updates

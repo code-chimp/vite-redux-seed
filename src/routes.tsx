@@ -5,7 +5,6 @@ import FourOhFour from './pages/FourOhFour';
 import Counter from './pages/Counter';
 import NotificationsDemo from './pages/NotificationsDemo';
 import Users from './pages/Users';
-import Vehicles from './pages/Vehicles';
 
 const routes: Array<RouteObject> = [
   {
@@ -23,10 +22,6 @@ const routes: Array<RouteObject> = [
       {
         path: AppRoutes.Users,
         element: <Users />,
-      },
-      {
-        path: AppRoutes.Vehicles,
-        element: <Vehicles />,
       },
       {
         path: AppRoutes.Fallthrough,
