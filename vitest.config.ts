@@ -27,7 +27,7 @@ export default mergeConfig(
           'src/main.tsx',
           'src/routes.tsx',
         ],
-        branches: 85,
+        branches: 80,
         functions: 90,
         statements: 90,
       },

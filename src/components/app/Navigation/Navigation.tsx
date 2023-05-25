@@ -20,6 +20,11 @@ const Navigation: FC = () => {
           Notifications
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" to={AppRoutes.Vehicles}>
+          Star Wars Vehicles
+        </Link>
+      </li>
     </ul>
   );
 };

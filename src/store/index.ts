@@ -1,7 +1,7 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import jsonApi from './services/json';
-import swApi from './services/sw';
+import jsonPlaceholderService from './services/jsonPlaceholder';
+import swapiService from './services/swapi';
 import alerts from './slices/alerts';
 import counter from './slices/counter';
 import toasts from './slices/toasts';
@@ -11,11 +11,13 @@ const store = configureStore({
     alerts,
     counter,
     toasts,
-    [jsonApi.reducerPath]: jsonApi.reducer,
-    [swApi.reducerPath]: swApi.reducer,
+    [jsonPlaceholderService.reducerPath]: jsonPlaceholderService.reducer,
+    [swapiService.reducerPath]: swapiService.reducer,
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(jsonApi.middleware).concat(swApi.middleware),
+    getDefaultMiddleware()
+      .concat(jsonPlaceholderService.middleware)
+      .concat(swapiService.middleware),
   devTools: process.env.NODE_ENV !== 'production',
 });
 

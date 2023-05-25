@@ -16,8 +16,7 @@ const MainLayout: FC = () => {
             <Link className="navbar-brand" to={AppRoutes.Home}>
               <h4>
                 <FontAwesomeIcon icon={faBootstrap} />+
-                <FontAwesomeIcon icon={faFontAwesome} />
-                Bootstrap and FontAwesome!
+                <FontAwesomeIcon icon={faFontAwesome} /> Bootstrap and FontAwesome!
               </h4>
             </Link>
             <div className="container-fluid">

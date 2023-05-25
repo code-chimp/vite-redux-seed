@@ -1,8 +1,9 @@
-import IVehicle from '../../@interfaces/swApi/IVehicle';
+import IVehicleDto from '../../@interfaces/swApi/IVehicleDto';
+import IVehiclesResponse from '../../@interfaces/swApi/IVehicleResponse';
 
-export const mockVehicles: Array<IVehicle> = [
+export const mockVehicles: Array<IVehicleDto> = [
   {
-    url: 'https://swapi.dev/api/vehicles/16/',
+    url: 'https://swapi.dev/api/vehicles/88/',
     name: 'TIE bomber',
     model: 'TIE/sa bomber',
     manufacturer: 'Sienar Fleet Systems',
@@ -20,7 +21,7 @@ export const mockVehicles: Array<IVehicle> = [
     edited: '2014-12-20T21:30:21.675000Z',
   },
   {
-    url: 'https://swapi.dev/api/vehicles/18/',
+    url: 'https://swapi.dev/api/vehicles/99/',
     name: 'AT-AT',
     model: 'All Terrain Armored Transport',
     manufacturer: 'Kuat Drive Yards, Imperial Department of Military Research',
@@ -38,7 +39,7 @@ export const mockVehicles: Array<IVehicle> = [
     edited: '2014-12-20T21:30:21.677000Z',
   },
   {
-    url: 'https://swapi.dev/api/vehicles/19/',
+    url: 'https://swapi.dev/api/vehicles/77/',
     name: 'AT-ST',
     model: 'All Terrain Scout Transport',
     manufacturer: 'Kuat Drive Yards, Imperial Department of Military Research',
@@ -56,3 +57,10 @@ export const mockVehicles: Array<IVehicle> = [
     edited: '2014-12-20T21:30:21.679000Z',
   },
 ];
+
+export const mockVehiclesResponse: IVehiclesResponse = {
+  count: 3,
+  next: 'https://swapi.dev/api/vehicles/?page=2',
+  previous: null,
+  results: [...mockVehicles],
+};
