@@ -8,11 +8,15 @@ enum HttpStatusCodes {
   Redirect,
   BadRequest = 400,
   Unauthorized,
+  PaymentRequired,
   Forbidden,
   NotFound,
+  RequestTimeout = 408,
   InternalServerError = 500,
   NotImplemented,
   BadGateway,
+  ServiceUnavailable,
+  GatewayTimeout,
 }
 
 export default HttpStatusCodes;

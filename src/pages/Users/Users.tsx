@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faTrash } from '@fortawesome/free-solid-svg-icons';
 import IUser from '../../@interfaces/jsonApi/IUser';
-import { useGetUsersQuery } from '../../store/services/json/endpoints/users';
+import { useGetUsersQuery } from '../../store/services/jsonPlaceholder/endpoints/jsonPlaceholderUsersService';
 import { unwrapRTKQueryError } from '../../helpers';
 
 const Users: FC = () => {
@@ -44,7 +44,7 @@ const Users: FC = () => {
           <tr>
             <td data-testid="error-indicator" colSpan={4}>
               Error:{' '}
-              {error ? unwrapRTKQueryError('Users.tsx', error).message : 'unexpected error'}
+              {error ? unwrapRTKQueryError('Vehicles.tsx', error).message : 'unexpected error'}
             </td>
           </tr>
         )}

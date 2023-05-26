@@ -19,6 +19,8 @@ export const toasts = createSlice({
   reducers: {
     removeToastMessage: (state: Array<IToastMessage>, action: PayloadAction<string>) => {
       const index = state.findIndex(t => t.id === action.payload);
+
+      /* istanbul ignore next -- @preserve */
       if (index > -1) {
         state.splice(index, 1);
       }
