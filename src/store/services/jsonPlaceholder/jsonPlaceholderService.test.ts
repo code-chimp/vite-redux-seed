@@ -1,15 +1,15 @@
 import { setupApiStore } from '../../../helpers';
 import HttpStatusCodes from '../../../@enums/HttpStatusCodes';
+import IUser from '../../../@interfaces/jsonApi/IUser';
 import { mockUsers } from '../../../@mocks/jsonApi/users';
 import { jsonPlaceholderUsersService } from './endpoints/jsonPlaceholderUsersService';
 import jsonPlaceholderService from './jsonPlaceholderService';
-import IUser from '../../../@interfaces/jsonApi/IUser';
 
 describe('store / services / jsonPlaceholder / jsonPlaceholderService', () => {
   const storeRef = setupApiStore(jsonPlaceholderService);
 
   describe('users', () => {
-    const newUser: Partial<IUser> = {
+    const testUser: Partial<IUser> = {
       name: 'Test User',
       username: 'testuser',
       email: 'test@user.com',
@@ -57,7 +57,7 @@ describe('store / services / jsonPlaceholder / jsonPlaceholderService', () => {
       expect(result.data).toEqual(expected);
     });
 
-    it('should fail with not-found if one not found', async () => {
+    it('should error on invalid fetch one request', async () => {
       const id = 999;
 
       const result = await storeRef.store.dispatch(
@@ -74,10 +74,10 @@ describe('store / services / jsonPlaceholder / jsonPlaceholderService', () => {
       const id = mockUsers.length;
 
       const result = await storeRef.store.dispatch(
-        jsonPlaceholderUsersService.endpoints.addUser.initiate(newUser),
+        jsonPlaceholderUsersService.endpoints.addUser.initiate(testUser),
       );
 
-      expect(result.data).toEqual({ id, ...newUser });
+      expect(result.data).toEqual({ id, ...testUser });
     });
 
     it('should update one', async () => {
@@ -93,8 +93,6 @@ describe('store / services / jsonPlaceholder / jsonPlaceholderService', () => {
         jsonPlaceholderUsersService.endpoints.updateUser.initiate(updatedUser),
       );
 
-      console.info(result);
-
       expect(result.data).toEqual({ ...existing, ...updatedUser });
     });
 
@@ -109,7 +107,26 @@ describe('store / services / jsonPlaceholder / jsonPlaceholderService', () => {
         jsonPlaceholderUsersService.endpoints.updateUser.initiate(updatedUser),
       );
 
-      console.info(result);
+      expect(result.error).toBeDefined();
+      expect(result.error.status).toBe(HttpStatusCodes.NotFound);
+    });
+
+    it('should delete one', async () => {
+      const id = 4;
+
+      const result = await storeRef.store.dispatch(
+        jsonPlaceholderUsersService.endpoints.deleteUser.initiate(id),
+      );
+
+      expect(result.data).toBeNull();
+    });
+
+    it('should error on invalid delete request', async () => {
+      const id = 99;
+
+      const result = await storeRef.store.dispatch(
+        jsonPlaceholderUsersService.endpoints.deleteUser.initiate(id),
+      );
 
       expect(result.error).toBeDefined();
       expect(result.error.status).toBe(HttpStatusCodes.NotFound);

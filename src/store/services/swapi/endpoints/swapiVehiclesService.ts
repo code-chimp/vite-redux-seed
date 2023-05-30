@@ -9,11 +9,13 @@ export const swapiVehiclesService = api.injectEndpoints({
   endpoints: builder => ({
     getVehicles: builder.query<Array<IVehicle>, void>({
       query: () => '/vehicles',
-      transformResponse: (response: IVehiclesResponse) => {
+      transformResponse: /* istanbul ignore next -- @preserve */ (
+        response: IVehiclesResponse,
+      ) => {
         return response.results.map((vehicle: IVehicleDto) => {
           return {
-            ...vehicle,
             id: Number((vehicle.url.match(numberRegex) || [-1])[0]),
+            ...vehicle,
           };
         });
       },
@@ -25,7 +27,7 @@ export const swapiVehiclesService = api.injectEndpoints({
 
     getVehicle: builder.query<IVehicle, number>({
       query: id => `/vehicles/${id}/`,
-      transformResponse: (response: IVehicleDto) => {
+      transformResponse: /* istanbul ignore next -- @preserve */ (response: IVehicleDto) => {
         return {
           id: Number((response.url.match(numberRegex) || [-1])[0]),
           ...response,

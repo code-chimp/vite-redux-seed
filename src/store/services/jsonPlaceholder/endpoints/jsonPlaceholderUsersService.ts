@@ -1,5 +1,3 @@
-/* ignore generic component in coverage report */
-/* istanbul ignore file -- @preserve */
 import IUser from '../../../../@interfaces/jsonApi/IUser';
 import api from '../';
 

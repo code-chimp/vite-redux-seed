@@ -34,7 +34,20 @@ describe('store / services / swapi / swapiService', () => {
       expect(result.data).toEqual(expected);
     });
 
-    it('should fail with not-found if one not found', async () => {
+    it('should supply a number id when fetching one', async () => {
+      const id = 99; // AT-AT
+
+      const result = await storeRef.store.dispatch(
+        swapiVehiclesService.endpoints.getVehicle.initiate(id),
+      );
+
+      expect(result.isSuccess).toBe(true);
+      expect(result.isError).toBe(false);
+      expect(result.data.id).toBeDefined();
+      expect(typeof result.data.id).toBe('number');
+    });
+
+    it('should error on invalid fetch one request', async () => {
       const id = 0; // literally nothing
 
       const result = await storeRef.store.dispatch(
