@@ -140,15 +140,10 @@ describe('helpers / service', () => {
     });
 
     it('should throw an error if the compound payload is bad', async () => {
-      interface ITest extends IApiBaseResponse {
-        data: string;
-      }
-
-      const body: ITest = {
+      const body: IApiBaseResponse = {
         status: HttpStatusCodes.BadRequest,
         success: false,
         requestId: 'iamnotarealboy',
-        data: 'we no got one',
         errors: ['i am not the happy'],
       };
 

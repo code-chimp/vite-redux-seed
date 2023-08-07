@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 import AsyncStates from '../../@enums/AsyncStates';
-import IUser from '../../@interfaces/IUser';
+import IUser from '../../@interfaces/jsonApi/IUser';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { loadUsers, selectUsers } from '../../store/slices/user';
 
@@ -41,9 +41,9 @@ const Users: FC = () => {
           users.map((user: IUser) => (
             <tr key={user.id} data-testid={`row_${user.id}`}>
               <td>{user.name}</td>
-              <td>{user.address?.city || 'unknown'}</td>
-              <td>{user.address?.zipcode || 'unknown'}</td>
-              <td>{user.company?.name || 'unknown'}</td>
+              <td>{user.address?.city ?? 'unknown'}</td>
+              <td>{user.address?.zipcode ?? 'unknown'}</td>
+              <td>{user.company?.name ?? 'unknown'}</td>
             </tr>
           ))
         ) : status === AsyncStates.Fail ? (

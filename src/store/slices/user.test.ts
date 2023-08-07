@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import thunk from 'redux-thunk';
-import { Mock } from 'vitest';
 import configureMockStore, { MockStoreEnhanced } from 'redux-mock-store';
-import { initialState, IUserSlice, loadUsers, user } from './user';
+import { Mock } from 'vitest';
 import AsyncStates from '../../@enums/AsyncStates';
-import IUser from '../../@interfaces/IUser';
-import { mockUsers } from '../../@mocks/users';
+import IUser from '../../@interfaces/jsonApi/IUser';
+import { mockUsers } from '../../@mocks/jsonApi/users';
+import { initialState, IUserSlice, loadUsers, user } from './user';
 
 import * as usersApi from '../../services/user/UsersApi';
 vi.mock('../../services/user/UsersApi');
@@ -78,6 +78,25 @@ describe('store / slices / user', () => {
         expect(state.users).not.toBeNull();
         expect(state.users.length).toEqual(mockUsers.length);
         expect(state.error).toBeNull();
+      });
+
+      it('should set the `users` property to an empty array if receiving `null` from the backend', () => {
+        const existingState = {
+          ...initialState,
+          users: [...mockUsers],
+          status: AsyncStates.Success,
+        };
+
+        const action = {
+          type: loadUsers.fulfilled.type,
+          payload: null,
+        };
+
+        const state: IUserSlice = user.reducer(existingState, action);
+
+        expect(state.status).toEqual(AsyncStates.Success);
+        expect(state.users).not.toBeNull();
+        expect(state.users).toEqual([]);
       });
 
       it('should set correct loading status and error message when loading users fails', () => {

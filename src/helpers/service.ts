@@ -74,5 +74,6 @@ export async function processApiResponse<Type>(response: Response): Promise<Type
 export const unwrapServiceError = (serviceMethod: string, error: any): Error => {
   return new Error(
     `${serviceMethod} error: ${error.errors ? error.errors[0] : error.message}`,
+    { cause: error.cause ?? {} },
   );
 };

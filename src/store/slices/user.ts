@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import AsyncStates from '../../@enums/AsyncStates';
-import IUser from '../../@interfaces/IUser';
+import IUser from '../../@interfaces/jsonApi/IUser';
 import AsyncStatus from '../../@types/AsyncStatus';
 import { fetchUsers } from '../../services/user/UsersApi';
 import { StoreState } from '../';
@@ -25,6 +25,7 @@ export const loadUsers = createAsyncThunk(
     try {
       return await fetchUsers();
     } catch (e: any) {
+      /* istanbul ignore next -- @preserve */
       return rejectWithValue(e.message || 'Internal Server Error');
     }
   },
