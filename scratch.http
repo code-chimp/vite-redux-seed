@@ -1,0 +1,5 @@
+# JSON Placeholder Guide: https://jsonplaceholder.typicode.com/guide/
+
+### GET JSON Placeholder users
+GET https://jsonplaceholder.typicode.com/users
+Accept: application/json

@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [main, rtk-query]
+    branches: [main]
   pull_request:
-    branches: [main, rtk-query]
+    branches: [main]
 
 jobs:
   Test:
@@ -13,17 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Use Node LTS
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Validate
-        run: npm run test:ci
+        run: pnpm test:coverage
 
       - name: Upload coverage
         uses: codecov/codecov-action@v3

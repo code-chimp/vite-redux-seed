@@ -6,14 +6,16 @@
 /.vscode
 /build
 /coverage
+/docs
 /node_modules
 /public
 !public/index.html
 .gitignore
 .prettierignore
-.prettierrc
+.prettierrc.json
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 LICENSE
 *.graphql
 .graphqlconfig

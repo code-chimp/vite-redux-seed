@@ -5,8 +5,11 @@
     "esbenp.prettier-vscode",
     "humano.rest-client",
     "mhutchie.git-graph",
+    "mikestead.dotenv",
     "redhat.vscode-yaml",
+    "steoates.autoimport",
     "stylelint.vscode-stylelint",
+    "yoavbls.pretty-ts-errors",
     "zixuanchen.vitest-explorer"
   ]
 }

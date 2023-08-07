@@ -1,4 +1,4 @@
-import IUser from '../../@interfaces/IUser';
+import IUser from '../../@interfaces/jsonApi/IUser';
 import { createGetRequest, processApiResponse, unwrapServiceError } from '../../helpers';
 
 export const fetchUsers = async (): Promise<Array<IUser>> => {

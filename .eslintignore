@@ -1,3 +1,6 @@
 docs/**
 **/*.snap
 **/*.d.ts
+vite.config.ts
+vitest.config.ts
+vitest.setup.ts

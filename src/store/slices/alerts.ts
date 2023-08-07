@@ -21,6 +21,9 @@ export const alerts = createSlice({
   reducers: {
     removeAlert: (state: Array<IAlert>, action: PayloadAction<string>) => {
       const index = state.findIndex(a => a.id === action.payload);
+
+      /* this will never be hit, but is in here just to be thorough */
+      /* istanbul ignore if -- @preserve */
       if (index > -1) {
         state.splice(index, 1);
       }

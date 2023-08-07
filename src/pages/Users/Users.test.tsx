@@ -1,11 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+// @vitest-environment happy-dom
 import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
 import thunk from 'redux-thunk';
 import configureMockStore, { MockStore } from 'redux-mock-store';
-import Users from './Users';
 import AsyncStates from '../../@enums/AsyncStates';
 import { initialState, loadUsers } from '../../store/slices/user';
+import Users from './Users';
 
 const mockStore = configureMockStore([thunk]);
 let store: MockStore;
@@ -100,6 +100,10 @@ describe('components / Users', () => {
             name: 'B User',
             address: { city: 'Test', zipcode: 'test' },
             company: { name: 'kiewit' },
+          },
+          {
+            id: 3,
+            name: 'C User',
           },
         ],
         status: AsyncStates.Success,

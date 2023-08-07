@@ -1,0 +1,4 @@
+{
+  "*.scss": "stylelint --fix",
+  "*": "prettier --write --ignore-unknown"
+}

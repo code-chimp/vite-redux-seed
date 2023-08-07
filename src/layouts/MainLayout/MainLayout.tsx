@@ -1,5 +1,5 @@
-/* istanbul ignore file -- @preserve */
 /* complete demo code - replace with something real then write the tests */
+/* istanbul ignore file -- @preserve */
 import { FC } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
